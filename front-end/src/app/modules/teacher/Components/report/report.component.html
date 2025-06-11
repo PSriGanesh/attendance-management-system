@@ -1,0 +1,30 @@
+<div class="container">
+    <h1>View Student Report</h1>
+  
+    <!-- Roll Number Selection -->
+    <div class="form-group">
+      <label for="rollSelect">Select Roll Number:</label>
+      <select id="rollSelect" [(ngModel)]="selectedRollNumber" (change)="viewReport()" class="form-input">
+        <option [ngValue]="null" disabled>Select Roll Number</option>
+        <option *ngFor="let i of idList" [value]="i">{{ i }}</option>
+      </select>
+    </div>
+  
+    <!-- Student Report Display -->
+    <div *ngIf="selectedRollNumber!=0" class="report-details">
+      <h2>Student Report</h2>
+
+      <h3>Subject Details</h3>
+      <table>
+        <tr class="trhead">
+          <th>Subject</th>
+          <th>Attendance</th>
+        </tr>
+        <tr *ngFor="let subject of subjectReports">
+          <td>{{ subject.subject }}</td>
+          <td>{{ subject.attendance }}</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  

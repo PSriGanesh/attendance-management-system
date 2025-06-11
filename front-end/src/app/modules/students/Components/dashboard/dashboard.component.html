@@ -1,0 +1,22 @@
+<div class="container">
+    <!-- Student Details Section -->
+    <div class="student-details">
+      <h2>Welcome, {{ student.name }}</h2>
+      <p><strong>Roll Number:</strong> {{ student.id }}</p>
+      <p><strong>Email:</strong> {{ student.email }}</p>
+    </div>
+  
+    <!-- Navigation Boxes -->
+    <div class="grid-container">
+
+      <div class="box" (click)="goToUpdateDetails()">
+        <h3>Update</h3>
+        <p>Update your personal details</p>
+      </div>
+      <div class="box" (click)="goToViewReport()">
+        <h3>View Report</h3>
+        <p>Access detailed reports on your attendance and performance.</p>
+      </div>
+    </div>
+  </div>
+  

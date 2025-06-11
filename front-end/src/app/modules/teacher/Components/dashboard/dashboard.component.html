@@ -1,0 +1,20 @@
+<div class="container">
+    <!-- Teacher Details Section -->
+    <div class="teacher-details">
+      <h2>Welcome, {{ teacher.name }}</h2>
+      <p><strong>Email:</strong> {{ teacher.email }}</p>
+      <p><strong>Phone:</strong> {{ teacher.contact_Number }}</p>
+    </div>
+  
+    <div class="grid-container">
+      <div class="box" (click)="goToUpload()">
+        <h3>Upload Attendance</h3>
+        <p>Upload attendance for your classes on specific dates.</p>
+      </div>
+      <div class="box" (click)="goToReport()">
+        <h3>View Report</h3>
+        <p>Access detailed reports of student attendance and performance.</p>
+      </div>
+    </div>
+  </div>
+  

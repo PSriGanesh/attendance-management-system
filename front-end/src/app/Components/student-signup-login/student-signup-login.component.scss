@@ -1,0 +1,146 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #302b63, #24243e);
+    font-family: 'Jost', sans-serif;
+  }
+  
+  .main {
+    width: 100vw;
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    animation: fadeIn 0.6s ease-in-out;
+  }
+  
+  
+  label {
+    color: #24243e;
+    font-size: 1.8em;
+    font-weight: bold;
+    margin-bottom: 20px;
+    display: block;
+    text-align: center;
+  }
+  
+  input,
+  select {
+    width: 100%;
+    height: 45px;
+    background: #f3f3f3;
+    margin: 15px 0;
+    padding: 10px;
+    border: 2px solid transparent;
+    outline: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+  }
+  
+  select {
+    color: #6c757d;
+  }
+  
+  input:focus,
+  select:focus {
+    border-color: #5747ec;
+  }
+  
+  input.ng-touched.ng-invalid,
+  select.ng-touched.ng-invalid {
+    border-color: #ff4d4f;
+  }
+  
+  input.ng-touched.ng-valid,
+  select.ng-touched.ng-valid {
+    border-color: #28a745;
+  }
+  
+  .error {
+    color: #ff4d4f;
+    font-size: 0.85rem;
+    margin-top: -10px;
+    margin-bottom: 10px;
+    text-align: left;
+    padding-left: 5px;
+  }
+  
+  button {
+    width: 100%;
+    height: 50px;
+    background: linear-gradient(90deg, #5747ec, #302b63);
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  button:hover {
+    background: linear-gradient(90deg, #6d44b8, #5747ec);
+  }
+  
+  button:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+  }
+  
+  .Forget {
+    text-align: center;
+    margin-top: 15px;
+  }
+  
+  .Forget a {
+    color: #5747ec;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .Forget a:hover {
+    text-decoration: underline;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 500px) {
+    .main {
+      width: 90%;
+    }
+  
+    label {
+      font-size: 1.5em;
+    }
+  
+    input,
+    select {
+      font-size: 0.9rem;
+    }
+  
+    button {
+      font-size: 1rem;
+    }
+  }
+
+  .signup {
+    padding: 30px;
+    margin: 0px auto;
+  }
+  

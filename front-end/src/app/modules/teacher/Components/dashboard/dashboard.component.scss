@@ -1,0 +1,58 @@
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+  }
+  
+  .admin-details {
+    background: #f4f6f8;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .admin-details h2 {
+    font-size: 24px;
+    color: #333;
+  }
+  
+  .admin-details p {
+    font-size: 16px;
+    color: #666;
+  }
+  
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  
+  .box {
+    background: #1f80e0;
+    color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    text-align: center;
+    transition: transform 0.3s, background 0.3s;
+  }
+  
+  .box:hover {
+    transform: scale(1.05);
+    background: #166abf;
+  }
+  
+  .box h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .box p {
+    font-size: 14px;
+    color: #e0e0e0;
+  }
+  

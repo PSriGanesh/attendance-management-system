@@ -1,0 +1,29 @@
+<div class="report-container">
+    <h2>Student Report</h2>
+    
+    <!-- Student Information -->
+    <div class="student-details">
+      <p><strong>Name:</strong> {{ student.name }}</p>
+      <p><strong>Roll No:</strong> {{ student.id }}</p>
+      <p><strong>Email:</strong> {{ student.email }}</p>
+      <p><strong>Phone:</strong> {{ student.contact_Number }}</p>
+    </div>
+  
+    <!-- Subjects Table -->
+    <h3>Subject-wise Report</h3>
+    <table class="subject-table">
+      <thead>
+        <tr>
+          <th>Subject</th>
+          <th>Attendance (%)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let record of subjects">
+          <td>{{ record.subject }}</td>
+          <td>{{ record.attendance }}%</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

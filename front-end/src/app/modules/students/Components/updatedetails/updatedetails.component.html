@@ -1,0 +1,27 @@
+<div class="update-container">
+    <h2>Update Your Details</h2>
+    <form (ngSubmit)="updateStudentDetails()">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" id="name" [(ngModel)]="student.name" name="name" required />
+      </div>
+  
+      <div class="form-group" style="display: none;">
+        <label for="email">Email</label>
+        <input type="email" id="email" [(ngModel)]="student.email" name="email" required />
+      </div>
+  
+      <div class="form-group">
+        <label for="course">Course</label>
+        <input type="text" id="course" [(ngModel)]="student.course" name="course" required />
+      </div>
+  
+      <div class="form-group">
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" [(ngModel)]="student.contact_Number" name="phone" required />
+      </div>
+  
+      <button type="submit" class="update-btn">Update Details</button>
+    </form>
+  </div>
+  

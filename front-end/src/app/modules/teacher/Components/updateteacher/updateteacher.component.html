@@ -1,0 +1,29 @@
+<div class="container">
+    <h1>Update Teacher Details</h1>
+  
+    <form (ngSubmit)="updateTeacherDetails()" class="form-group">
+      <!-- Teacher ID -->
+      <label for="teacherId">Teacher ID:</label>
+      <input type="text" id="teacherId" [(ngModel)]="teacher.id" name="id" class="form-input" placeholder="{{ teacher.id }}" required />
+  
+      <!-- Teacher Name -->
+      <label for="teacherName">Name:</label>
+      <input type="text" id="teacherName" [(ngModel)]="teacher.name" name="name" class="form-input" placeholder="{{ teacher.name }}" required />
+  
+      <!-- Teacher Email -->
+      <label for="teacherEmail">Email:</label>
+      <input type="email" id="teacherEmail" [(ngModel)]="teacher.email" name="email" class="form-input" placeholder="{{ teacher.email }}" required />
+  
+      <!-- Department -->
+      <label for="teacherDepartment">Department:</label>
+      <input type="text" id="teacherDepartment" [(ngModel)]="teacher.department" name="department" class="form-input" placeholder="{{ teacher.department }}" required />
+  
+      <!-- Phone Number -->
+      <label for="teacherPhone">Phone Number:</label>
+      <input type="tel" id="teacherPhone" [(ngModel)]="teacher.phone" name="phone" class="form-input" placeholder="{{ teacher.phone }}" required />
+  
+      <!-- Submit Button -->
+      <button type="submit" class="save-button">Update Details</button>
+    </form>
+  </div>
+  

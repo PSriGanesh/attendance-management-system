@@ -1,0 +1,54 @@
+
+<style>
+  td{
+  border-style:ridge; 
+  text-align: center;
+}
+table{
+  margin: auto;
+  margin-top: 35px;
+  margin-bottom: 25px;
+}
+.trhead{
+  background-color: black;
+  color: white;
+}
+h1{
+  text-align: center;
+}
+</style>
+
+<h1>Student Attendance List</h1>
+<table>
+  <tr class="trhead">
+      <td>Roll</td>
+     
+      <td>Session</td>
+      <td>Semester </td>
+      <td>Subject ID </td>
+      <td>Cource</td>
+      <td>Date</td>
+      <td>time</td>
+      <td>Status </td>
+
+
+
+  </tr>
+  <tr *ngFor="let attendance of attendances">
+      
+      <td>{{attendance.id}}</td>
+
+      <td>{{attendance.session}}</td>
+      <td>{{attendance.semester}}</td>
+      <td>{{attendance.subject_Id}}</td>
+      <td>{{attendance.cource}}</td>
+      <td>{{attendance.date}}</td>
+      <td>{{attendance.time}}</td>
+      <td>{{attendance.status}}</td>
+      
+      
+     
+  </tr>
+  
+
+</table>

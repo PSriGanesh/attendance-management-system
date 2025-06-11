@@ -1,0 +1,63 @@
+<div class="container">
+    <h1>Select Course, Subject, and Date to View Students</h1>
+  
+    <div class="form-group">
+        <!-- Dropdown for selecting course -->
+        <label for="courseSelect">Course:</label>
+        <select id="courseSelect" [(ngModel)]="selectedCourse" (change)="filterStudentData()" class="form-input">
+            <option [ngValue]="null" disabled>Select Course</option>
+            <option *ngFor="let course of courses" [value]="course">{{ course }}</option>
+        </select>
+  
+        <!-- Dropdown for selecting subject ID -->
+        <label for="subjectSelect">Subject ID:</label>
+        <select id="subjectSelect" [(ngModel)]="selectedSubjectId" (change)="filterStudentData()" class="form-input">
+            <option [ngValue]="null" disabled>Select Subject ID</option>
+            <ng-container *ngFor="let subject of subjects">
+                <option *ngIf="subject.course === selectedCourse" [value]="subject.id">{{ subject.id }}</option>
+            </ng-container>
+        </select>
+  
+        <!-- Dropdown for selecting date -->
+        <label for="dateSelect">Date:</label>
+        <select id="dateSelect" [(ngModel)]="selectedDate" (change)="filterStudentData()" class="form-input">
+            <option [ngValue]="null" disabled>Select Date</option>
+            <option *ngFor="let date of dates" [value]="date">{{ date }}</option>
+        </select>
+    </div>
+  
+    <h1>Student List for Attendance</h1>
+    <table>
+        <tr class="trhead">
+            <th>Roll</th>
+            <th>Name</th>
+            <th>Session</th>
+            <th>Semester</th>
+            <th>Subject ID</th>
+            <th>Course</th>
+            <th>Date</th>
+            <th>Status</th>
+        </tr>
+        <tr *ngFor="let student of filteredStudents">
+            <td>{{ student.id }}</td>
+            <td>{{ student.name }}</td>
+            <td>{{ student.session }}</td>
+            <td>{{ student.semester }}</td>
+            <td>{{ student.subject_Id }}</td>
+            <td>{{ student.course }}</td>
+            <td>{{ student.date }}</td>
+            <td>
+                <label class="status-label">
+                    <input type="radio" name="status-{{ student.id }}" (change)="updateStatus(student.id, 'Present')" [checked]="student.status === 'Present'"> Present
+                </label>
+                <label class="status-label">
+                    <input type="radio" name="status-{{ student.id }}" (change)="updateStatus(student.id, 'Absent')" [checked]="student.status === 'Absent'"> Absent
+                </label>
+            </td>
+        </tr>
+    </table>
+  
+    <!-- Save Attendance Button -->
+    <button class="save-button" (click)="saveAttendance()">Save Attendance</button>
+  </div>
+  
